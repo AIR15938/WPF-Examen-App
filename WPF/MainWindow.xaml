@@ -4,9 +4,34 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPF"
+        xmlns:view="clr-namespace:WPF.View"
+        xmlns:viewModel="clr-namespace:WPF.ViewModel"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="WPFApp" Height="450" Width="800" FontSize="20"
+        ResizeMode="CanMinimize">
+    <Window.Resources>
+        <DataTemplate DataType="{x:Type viewModel:EntityDetailViewModel}">
+            <view:EntityDetailView/>
+        </DataTemplate>
+    </Window.Resources>
     <Grid>
-
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Menu Grid.ColumnSpan="2" FontSize="20">
+            <MenuItem Header="Create">
+                <MenuItem Header="New Entity" Command="{Binding CreateNewEntityCommand}"/>
+            </MenuItem>
+        </Menu>
+        <view:NavigationView Grid.Row="1"
+                         DataContext="{Binding NavigationViewModel}"/>
+        <ContentControl Grid.Row="1"
+                           Grid.Column="1"
+                           Content="{Binding EntityDetailViewModel}"/>
     </Grid>
 </Window>
