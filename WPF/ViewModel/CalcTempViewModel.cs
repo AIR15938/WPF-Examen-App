@@ -32,7 +32,7 @@ namespace WPF.ViewModel
             {
                 _inputTemperature = value;
                 ConvertTemperature();
-                OnPropertyChanged(() => this.InputTemperature);
+                
             }
         }
 
@@ -42,7 +42,7 @@ namespace WPF.ViewModel
             set
             {
                 _result = value;
-                OnPropertyChanged(() => this.Result);
+                
             }
         }
 
@@ -53,7 +53,7 @@ namespace WPF.ViewModel
             {
                 _calculateFahrenheit = value;
                 ConvertTemperature();
-                OnPropertyChanged(() => this.CalculateFahrenheit);
+               
             }
         }
 
@@ -64,7 +64,7 @@ namespace WPF.ViewModel
             {
                 _calculateCelsius = value;
                 ConvertTemperature();
-                OnPropertyChanged(() => this.CalculateCelsius);
+             
             }
         }
 
