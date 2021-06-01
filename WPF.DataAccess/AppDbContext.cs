@@ -3,6 +3,7 @@ using WPF.Model;
 
 namespace WPF.DataAccess
 {
+    //SQLite heb ik niet, wist niet dat we dit moesten gebruiken
     public class AppDbContext : DbContext
     {
         public AppDbContext()

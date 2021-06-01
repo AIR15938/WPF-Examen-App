@@ -124,8 +124,7 @@ namespace WPF.ViewModel
 
         //private void OnAddTrackRecordExecute()
         //{
-        //    var newTrackRecord = new TrackRecord);
-        //    TrackRecord.Add(newTrackRecord)
+        //    
         //}
     }
 }
