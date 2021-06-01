@@ -3,6 +3,8 @@ using System;
 
 namespace WPFTempTest
 {
+	//ViewModel niet meer in orde kunnen brengen
+
 	//[TestMethod()]
 	//public void ChangeTemperatureFromCelsiusToFarenheit()
 	//{
